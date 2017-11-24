@@ -1,6 +1,6 @@
 {
   "name": "module-version",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "dist/index.js",
   "repository": "git@github.com:DavidBabel/module-version.git",
   "author": "David Babel <david.babel@ogury.co>",
@@ -11,7 +11,8 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "NODE_ENV=production babel --out-dir dist lib",
-    "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js"
+    "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
+    "test-build-version": "node ./dist/bin/build-version.js"
   },
   "dependencies": {
     "app-root-path": "^2.0.1",

@@ -1,8 +1,7 @@
 # Module Version
 
 Allow you to add :
-
-- a version.json builder
+- a version.json builder to your .travis.yml
 - an express controller to return the version.json
 
 ## Install
@@ -15,7 +14,7 @@ yarn add Ogury/module-version#v1.X.X
 
 ## Requirements
 
-Update your .travis.yml by adding in "" :
+Update your .travis.yml by adding in "script" part :
 
 ```yaml
 script:

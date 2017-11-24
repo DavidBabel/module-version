@@ -5,11 +5,11 @@
   "repository": "git@github.com:DavidBabel/module-version.git",
   "author": "David Babel <david.babel@ogury.co>",
   "license": "MIT",
+  "bin": {
+    "build-version": "./dist/bin/build-version.js"
+  },
   "scripts": {
     "postinstall": "npm run build",
-    "bin": {
-      "build-version": "./dist/bin/build-version.js"
-    },
     "build": "NODE_ENV=production babel --out-dir dist lib",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js"
   },

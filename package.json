@@ -9,9 +9,9 @@
     "build-version": "./bin/build-version.js"
   },
   "scripts": {
-    "postinstall": "npm run build && npm run move-bin",
-    "build": "NODE_ENV=production babel --out-dir dist lib",
-    "move-bin" : "mv ./dist/bin ./",
+    "postinstall": "npm run build",
+    "build": "NODE_ENV=production babel --out-dir dist lib && npm run move-bin",
+    "move-bin" : "rm -rf ./bin && mv ./dist/bin ./",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
     "test-build-version": "node ./bin/build-version.js"
   },

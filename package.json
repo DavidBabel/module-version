@@ -10,8 +10,8 @@
   },
   "scripts": {
     "postinstall": "npm run build",
-    "build": "NODE_ENV=production babel --out-dir dist lib && npm run move-bin",
-    "move-bin" : "rm -rf ./bin && mv ./dist/bin ./",
+    "build": "NODE_ENV=production babel --out-dir dist lib && npm run symlink-bin",
+    "symlink-bin" : "ln -s ./dist/bin ../.bin/build-version",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
     "test-build-version": "node ./bin/build-version.js"
   },

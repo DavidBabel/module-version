@@ -5,6 +5,10 @@ Allow you to add :
 - a version.json builder to your .travis.yml
 - an express controller to return the version.json
 
+## Warning
+
+To run `npm install` or `yarn install` in your project with this module in it you need to store your key in a ssh-agent or in your MacOs Keychain : https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
 ## Install
 
 To install it in your project, think to fix the version using this kind of command :
@@ -37,16 +41,16 @@ app.use('/', controllers);
 app.listen(3000);
 ```
 
-# Work on it
+## Contribute
 
-## Quickstart
+### Quickstart
 
 ```
 yarn install
 yarn build
 ```
 
-## Tests
+### Tests
 
 ```
 yarn test

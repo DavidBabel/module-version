@@ -5,13 +5,10 @@
   "repository": "git@github.com:DavidBabel/version-controller.git",
   "author": "David Babel <david.babel@ogury.co>",
   "license": "MIT",
-  "bin": {
-    "build-version": "./bin/build-version.js"
-  },
   "scripts": {
     "postinstall": "npm run build",
     "build": "NODE_ENV=production babel --out-dir dist lib && npm run symlink-bin",
-    "symlink-bin" : "ln -s ./dist/bin ../.bin/build-version",
+    "symlink-bin" : "ln -sf ./dist/bin ../.bin/build-version",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
     "test-build-version": "node ./bin/build-version.js"
   },

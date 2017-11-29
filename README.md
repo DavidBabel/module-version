@@ -1,6 +1,7 @@
-# Module Version
+# Version Middleware
 
 Allow you to add :
+
 - a version.json builder to your .travis.yml
 - an express controller to return the version.json
 
@@ -9,7 +10,7 @@ Allow you to add :
 To install it in your project, think to fix the version using this kind of command :
 
 ```
-yarn add Ogury/module-version#v1.X.X
+yarn add Ogury/version-controller#v1.X.X
 ```
 
 ## Requirements
@@ -28,7 +29,7 @@ script:
 How to use the Metric Handler. You can enable it for the endpoint you want
 
 ```javascript
-import {versionControler} from 'module-version';
+import {versionControler} from 'version-controller';
 
 const app = express();
 

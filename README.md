@@ -19,9 +19,7 @@ Update your .travis.yml by adding in "script" part :
 
 ```yaml
 script:
-  - npm build-version
-  # or
-  - yarn build-version
+  - node_module/.bin/build-version
 ```
 
 ## Usage

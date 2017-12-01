@@ -1,13 +1,13 @@
 {
   "name": "version-controller",
-  "version": "2.0.6",
+  "version": "3.0.0",
   "main": "dist/index.js",
   "repository": "git@github.com:DavidBabel/version-controller.git",
   "author": "David Babel <david.babel@ogury.co>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "NODE_ENV=production babel --out-dir dist lib && npm run symlink-bin",
+    "postinstall": "npm run build && npm run symlink-bin",
+    "build": "NODE_ENV=production babel --out-dir dist lib",
     "symlink-bin" : "pwd && ln -sf ./dist/bin/build-version.js ../.bin/build-version",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
     "test-build-version": "node ./bin/build-version.js"

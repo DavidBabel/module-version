@@ -6,7 +6,7 @@
   "author": "David Babel <david.babel@ogury.co>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "npm run build && npm run symlink-bin",
+    "postinstall": "npm install && npm run build && npm run symlink-bin",
     "build": "NODE_ENV=production babel --out-dir dist lib",
     "symlink-bin" : "pwd && ln -sf ./dist/bin/build-version.js ../.bin/build-version",
     "test": "NODE_ENV=test mocha --require babel-core/register tests/**/*.js",
